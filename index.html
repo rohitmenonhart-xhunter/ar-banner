@@ -15,14 +15,14 @@
     <!-- AR Scene -->
     <a-scene embedded arjs>
         <!-- QR Code Marker -->
-        <a-marker type="pattern" url="path-to-your-marker-file.patt">
-            <!-- Larger Image or banner to be displayed above the QR code -->
+        <a-marker type="pattern" url="pattern.patt">
+            <!-- Image or banner displayed above the vertical QR code -->
             <a-image 
-                src="path-to-your-banner.png" 
+                src="pic.png" 
                 position="0 2 0"  <!-- 2 meters above the QR code -->
-                rotation="-90 0 0"  <!-- Laying flat above the QR code -->
-                width="4"           <!-- Larger width -->
-                height="2">         <!-- Larger height -->
+                rotation="0 0 0"  <!-- Align vertically with the QR code -->
+                width="4"         <!-- Make the banner large -->
+                height="2">       <!-- Adjust the height for better visibility -->
             </a-image>
         </a-marker>
         <a-entity camera></a-entity>
