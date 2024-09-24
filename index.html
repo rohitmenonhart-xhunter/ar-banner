@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Dustbin Experience</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
+    <style>
+        body { margin: 0; overflow: hidden; }
+        #ar-container { width: 100vw; height: 100vh; }
+    </style>
+</head>
+<body>
+    <!-- AR.js Scene -->
+    <a-scene embedded arjs>
+        <!-- Marker for QR code -->
+        <a-marker type="pattern" url="pattern.patt">
+            <!-- Larger image/banner floating ABOVE the dustbin -->
+            <a-image src="pic.png" 
+                     position="0 1.5 0"   <!-- Elevate the image higher above the QR code -->
+                     rotation="-90 0 0"   <!-- Flat orientation -->
+                     scale="4 4 4"        <!-- Enlarge the image by scaling it -->
+                     material="transparent:true; opacity:1.0"> <!-- Full opacity for visibility -->
+            </a-image>
+        </a-marker>
+
+        <a-entity camera></a-entity>
+    </a-scene>
+
+    <!-- QR Code Scanner -->
+    <div id="ar-container"></div>
+</body>
+</html>
